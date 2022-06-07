@@ -7,7 +7,6 @@
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
     text-decoration: none;
-
 }
 
 body {
@@ -64,8 +63,8 @@ body {
 }
 
 .header nav .button {
-    background-color: #ffffff;
-    color: black;
+    background-color: #dc143c;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     border-radius: 4px;
 

@@ -24,6 +24,11 @@ footer {
     padding-top: 22px;
 }
 
+.opcoes a {
+    text-decoration: none;
+    color: #999;
+}
+
 .footer-container h5 {
     margin-right: 22px;
 }
@@ -38,6 +43,7 @@ footer {
     margin-top: 50px;
     margin-left: 12px;
 }
+
 ::-webkit-scrollbar {
     width: 12px;
 }
