@@ -366,23 +366,23 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
-.over h3 {
+.over a h3 {
     color: white;
-    padding-top: 300px;
+    padding-top: 280px;
     padding-left: 20%;
     padding-right: 1%;
 }
 
-.not4 .over h3 {
+.not4 .over a h3 {
     color: white;
-    padding-top: 300px;
+    padding-top: 280px;
     padding-left: 15%;
     padding-right: 1%;
 }
 
-.not2 .over h3 {
+.not2 .over a h3 {
     color: white;
-    padding-top: 320px;
+    padding-top: 300px;
     padding-left: 15%;
     padding-right: 1%;
 }
