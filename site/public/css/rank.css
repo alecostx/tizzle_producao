@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&family=Orelega+One&display=swap');
+* {
+    margin: 0%;
+    padding: 0;
+    font-family: 'Nunito';
+}
+.container header {
+	margin: 0 auto;
+	padding: 1em;
+	text-align: center;
+}
+
+.container header h1 {
+  font-weight: 600;
+	font-size: 3em;
+	margin: 0;
+}
+
+#tabela_musicas {
+	line-height: 1.5em;
+	margin: 0 auto;
+	padding: 2em 0 3em;
+	width: 90%;
+	max-width: 2000px;
+	overflow: hidden;
+}
+
+#tabela_artistas {
+    line-height: 1.5em;
+	margin: 0 auto;
+	padding: 2em 0 3em;
+	width: 90%;
+	max-width: 2000px;
+	overflow: hidden;
+}
+
+#tabela_albuns {
+    line-height: 1.5em;
+	margin: 0 auto;
+	padding: 2em 0 3em;
+	width: 90%;
+	max-width: 2000px;
+	overflow: hidden;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: rgb(245, 242, 242);
+    
+}
+*::selection {
+    background-color: #a9a9a9;
+    color: black;
+}
+th {
+    background-color: #dc143c;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+    
+}
+
+td, th {
+    padding: 1em 1.5em;
+    text-align: left;
+}
+
+
+tbody tr {
+    transition: all .1 ease-in-out;
+}
+tbody tr:hover {
+    background-color: #0000002a;
+}
+
+td.rank {
+	text-transform: capitalize;
+}
+
+tr td img{
+    height: 100px;
+    width: 100px;
+}
+
+
+.tipos_rank {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+}
+ .tipos_rank h1 {
+    cursor: pointer;
+    text-align: center;
+}
+.tipos_rank h1:hover {
+    color: #dc143c;   
+}
+.agora {
+    color: #dc143c;
+}
+

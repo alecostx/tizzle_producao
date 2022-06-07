@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="https://kit.fontawesome.com/4ea0191552.js" crossorigin="anonymous"></script>
+    <script src="js/funcoes.js"></script>
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <div class="logo">
+                <div>
+                    <!-- <img src="assets/logo.png"> -->
+                    <h1>Tizzle</h1>
+                </div>
+            </div>
+            <nav>
+                <li><span><a href="index.html">Home</a></span></li>
+                <li><span><a href="sobre.html">Sobre</a></span></li>
+                <li><span><a href="login.html">Notícias</a></span></li>
+                <li><span><a href="index.html">Top 10</a></span></li>
+                <li><span><a href="fotos.html">Fotos</a></span></li>
+                <li><span><a href="login.html">Login</a></span></li>
+                <li><span><a href="cadastro.html" class="button">Cadastre-se</a></span></li>
+            </nav>
+        </div>
+    </header>
+    <div class="main-container">
+
+        <div class="container-right">
+
+            <div class="conteudo-right">
+
+                <h2>Login</h2>
+                <div class="ipts">
+                    <input type="email" placeholder="Email" id="email_input">
+                    <br>
+                    <input type="password" placeholder="Senha" id="senha_input">
+                    <br>
+                </div>
+                <button onclick="entrar()">Entre</button>
+                <br><br>
+                <div style="display: none;" id="loading"><i class="fa-solid fa-spinner fa-spin-pulse fa-2x1"></i></div>
+                <br> <br>
+                <a href="cadastro.html">
+                    <h4>Criar conta</h4>
+                </a>
+                <div class="social-media"> 
+                    <br>
+                    <h5>Ou entre com: </h5>
+                    <i class="fa-brands fa-facebook-square fa-2x1"></i>
+                    <i class="fa-brands fa-google-plus-square fa-2x1"></i>
+                    <i class="fa-brands fa-twitter-square fa-2x1"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="opcoes">
+                <h5>Home</h5>
+                <h5>Noticias</h5>
+                <h5>Cadastre-se</h5>
+                <h5>Login</h5>
+                <h5>Sobre</h5>
+                <h5>TOP 10</h5>
+            </div>
+            <div class="letter">
+                <h5>by Alexandre Costa</h5>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script>
+
+
+    function entrar() {
+        // aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            alert ("Preencha todos os campos")
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            // setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+            loading.style.display = "block"
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "/noticias/noticias.html";
+                    }, 2000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
+
+</script>

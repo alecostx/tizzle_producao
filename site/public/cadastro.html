@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Login</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="https://kit.fontawesome.com/4ea0191552.js" crossorigin="anonymous"></script>
+    <script src="js/funcoes.js"></script>
+    <link rel="stylesheet" href="css/footer.css">
+    
+    
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <div class="logo">
+                <div>
+                    <!-- <img src="assets/logo.png"> -->
+                    <h1>Tizzle</h1>
+                </div>
+            </div>
+            <nav>
+                <li><span><a href="index.html">Home</a></span></li>
+                <li><span><a href="sobre.html">Sobre</a></span></li>
+                <li><span><a href="login.html">Notícias</a></span></li>
+                <li><span><a href="index.html">Top 10</a></span></li>
+                <li><span><a href="fotos.html">Fotos</a></span></li>
+                <li><span><a href="login.html">Login</a></span></li>
+                <li><span><a href="cadastro.html" class="button">Cadastre-se</a></span></li>
+            </nav>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="conteiner-left">
+            <h1>Você está prestes a fazer parte do melhor portal de noticias de música do Brasil.</h1>
+            <div class="icones">
+                <i class="fa-brands fa-facebook-square fa-2xl"></i>
+                <i class="fa-brands fa-twitter-square fa-2xl"></i>
+                <i class="fa-brands fa-whatsapp-square fa-2xl"></i>
+                <i class="fa-solid fa-square-envelope fa-2xl"></i>
+            </div>
+            <div class="log">
+                <p>Já é registrado? Faça o login!</p>
+                <a href="login.html"><button>Login</button></a>
+            </div>
+        </div>
+
+        <div class="container-right">
+            <div class="conteudo-right">
+                <h2>Cadastre-se</h2>
+
+                <div class="ipts">
+                    <input type="text" placeholder="Nome Completo" id="ipt_nome">
+                    <br>
+                    <input type="email" placeholder="Email" id="ipt_email">
+                    <br>
+                    <input type="date" placeholder="Data de Nascimento" id="ipt_data">
+                    <br>
+                    <input type="text" placeholder="CPF/CNPJ" id="ipt_cpf">
+                    <br>
+                    <input type="password" placeholder="Senha" id="ipt_senha">
+                    <br>
+                    <input type="password" placeholder="Confirme a senha" id="ipt_confirmacao_senha">
+                    <br>
+                    <select name="artista" id="artista_fav">
+                        <option value="0">Qual seu artista preferido?</option>
+                        <option value="1">Tyler, the creator</option>
+                        <option value="2">Kanye West</option>
+                        <option value="3">The Weekend</option>
+                        <option value="4">Frank Ocean</option>
+                        <option value="5">YNW Melly</option>
+                        <option value="6">Outro</option>
+                    </select>
+                </div>
+                <button onclick="cadastrar()">Criar conta</button>
+                <div style="display: none;" id="loading"><i class="fa-solid fa-spinner fa-spin-pulse fa-2x1"></i></div>
+            </div>
+        </div>
+        <!-- <div id="div_aguardar" class="loading-div">
+            <img src="./assets/circle-loading.gif" id="loading-gif">
+        </div>
+
+        <div id="div_erros_login">
+
+        </div>
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div> -->
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="opcoes">
+                <h5>Home</h5>
+                <h5>Noticias</h5>
+                <h5>Cadastre-se</h5>
+                <h5>Login</h5>
+                <h5>Sobre</h5>
+                <h5>TOP 10</h5>
+            </div>
+            <div class="letter">
+                <h5>by Alexandre Costa</h5>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = ipt_nome.value;
+        var emailVar = ipt_email.value;
+        var dataVar = ipt_data.value;
+        var cpfVar = ipt_cpf.value;
+        var senhaVar = ipt_senha.value;
+        var confirmacaoSenhaVar = ipt_confirmacao_senha.value;
+        var artistaVar = artista_fav.value
+
+        if (nomeVar == "" || emailVar == "" || dataVar == "" || cpfVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || artistaVar == 0 
+        || senhaVar != confirmacaoSenhaVar) {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            alert ("As senhas precisam ser iguais, e o todos os campos preenchidos")
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            // setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                dataServer: dataVar,
+                cpfServer: cpfVar,
+                senhaServer: senhaVar,
+                artistaServer: artistaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                loading.style.display = "block"
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                },1500)
+                
+                limparFormulario();
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
+
+</script>

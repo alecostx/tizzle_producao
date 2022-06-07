@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,500;1,200;1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    background-color: #101010;
+}
+
+
+main {
+    background-color: #101010;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .foto {
+    background-image: url(../assets/eu.jpg);
+    background-size: cover;
+    height: 70vh;
+    width: 25vw;
+    filter: blur(2px);
+    transition: 1.2s;
+    border-radius: 12px;
+    position: relative;
+}
+
+.foto:hover {
+    filter: blur(0px);
+    transform: scale(1.05);
+    border-radius: 6;
+    box-shadow: 20px 20px 60px #000000,
+        -20px -20px 60px #000000;
+}
+
+main .sobre {
+    background-color: #181818;
+    height: 80vh;
+    width: 60vw;
+    border-radius: 24px;
+    transition: 1.2s;
+    position: initial;
+    color: #999;
+}
+
+.sobre:hover {
+    transform: scale(1.01);
+    border-radius: 12px;
+    box-shadow: 20px 20px 60px #000000,
+        -20px -20px 60px #000000;
+}
+
+.sobre h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.sobre p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.sobre button{
+    background-color: #DA4453;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    margin-left: 27vw;
+    cursor: pointer;
+}

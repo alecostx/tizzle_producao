@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&family=Orelega+One&display=swap');
+* {
+    margin: 0%;
+    padding: 0;
+    font-family: 'Nunito';
+}
+*::selection {
+    background-color: #a9a9a9;
+    color: black;
+}
+
+.main-container {
+background: linear-gradient(to right, #090909, #181818); 
+
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    
+}
+
+.conteiner-left {
+color: whitesmoke;
+height: 90vh;
+width: 20vw;
+background-color: #1e1e1e;
+border-radius: 6px;
+margin-top: 100px;
+}
+
+.container-right {
+    color: black;
+    height: 90vh;
+    width: 30vw;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    margin-top: 100px;
+}
+
+.conteudo-right  {
+    padding: 25px;
+    text-align: center;
+    
+}
+.conteudo-right h2  {
+    margin-bottom: 25px;
+}
+
+.ipts input {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 6px 0;
+    margin: 5px 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.ipts select {
+    padding: 4px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    border-bottom: 1px solid #999;
+    background: transparent;
+    
+}
+
+.conteudo-right button {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: #DA4453;
+    border: 0;
+    outline: none;
+    border-radius: 6px;
+    transition: all 0.8s;
+    color: white;
+}
+
+.conteudo-right button:hover {
+    transform: scale(1.1);
+}
+
+.conteiner-left h1 {
+   padding: 25px;
+}
+
+.conteiner-left .icones {
+display: flex;
+justify-content: center;
+padding: 40px;
+}
+
+.conteiner-left .icones i {
+    margin: 4px;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+
+.conteiner-left .icones i:hover{
+    margin: 4px;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.log {
+    text-align: center;
+}
+.conteiner-left button {
+    width: 35%;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin: auto;
+    background-color: #DA4453;
+    border: 0;
+    outline: none;
+    border-radius: 6px;
+    transition: all 0.8s;
+    color: white;
+    margin-top: 15px;
+}
+
+.conteiner-left button:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/rank.css">
+    <script src="https://kit.fontawesome.com/4ea0191552.js" crossorigin="anonymous"></script>
+    <script src="js/funcoes.js"></script>
+
+</head>
+
+<body onload="slider()">
+
+
+    <!-- BANNER -->
+
+    <div class="banner">
+        <div class="slider">
+            <img src="assets/img1.webp" id="img1">
+        </div>
+        <div class="overlay">
+            <div class="header">
+                <div class="logo">
+                    <h1>Tizzle</h1>
+                </div>
+                <div class="itens">
+                    <a href="index.html">Home</a>
+                    <a href="login.html">Noticias</a>
+                    <a href="#ranks">Top 10</a>
+                    <a href="">Sobre</a>
+                    <a href="fotos.html">Fotos</a>
+                    <a href="cadastro.html">Cadastre-se</a>
+                </div>
+            </div>
+            <div class="conteudo">
+                <h1>O melhor portal de notícias de música do Brasil.</h1>
+                <h3>Fique por dentro do mundo do Hip-Hop e R&B!</h3>
+                <a href="cadastro.html"><button>Faça parte!</button></a>
+            </div>
+            <a href="#ranks"><i style="color: white; margin-left: 50%; margin-top: 1px; --fa-animation-duration: 2s;"
+                    class="fa-solid fa-arrow-down fa-2x fa-bounce"></i></a>
+
+        </div>
+    </div>
+
+
+    <!-- RANKING -->
+    <section id="ranks">
+        <div id="tabela_musicas" style="display: block;">
+            <div class="tipos_rank">
+                <h1 onclick="mostrarmusica()" class="agora">Top músicas</h1>
+                <h1 onclick="mostrarartista()">Top artistas</h1>
+                <h1 onclick="mostraralbum()">Top fans</h1>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Música</th>
+                        <th>Artista</th>
+                        <th>Álbum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 <i id="subiu" class="fa-solid fa-arrow-up"></i></td>
+                        <td>Ivy</td>
+                        <td>Frank Ocean</td>
+                        <td><img src="assets/frank-ocean-blonde.jpg">
+                            <img id="iconeplay" src="assets/circle-play-solid.svg">
+                        </td>
+                    </tr>
+                    <audio id="ivy">
+                        <source src="assets/ivy.mp3" type="audio/mp3">
+                    </audio>
+
+                    <tr>
+                        <td>2 <i id="desceu" class="fa-solid fa-arrow-down"></i></td>
+                        <td>Try me</td>
+                        <td>The Weekend</td>
+                        <td><img src="assets/mydearmelancholy.jpg" alt="">
+                            <img id="iconeplay2" src="assets/circle-play-solid.svg">
+                        </td>
+
+                    </tr>
+                    <audio id="tryme">
+                        <source src="assets/tryme.mp3" type="audio/mp3">
+                    </audio>
+
+                    <tr>
+                        <td>3 <i id="subiu" class="fa-solid fa-arrow-up"></i></td>
+                        <td>Los Pollos Hermanos</td>
+                        <td>Kucks</td>
+                        <td><img src="assets/lospollos.jpg" alt="">
+                            <img id="iconeplay3" src="assets/circle-play-solid.svg">
+                        </td>
+                    </tr>
+                    <audio id="hermanos">
+                        <source src="assets/hermanos.mp3" type="audio/mp3">
+                    </audio>
+                    <tr>
+                        <td>4 <i id="subiu" class="fa-solid fa-arrow-up"></i></td>
+                        <td>Nice & Good</td>
+                        <td>Kucks ft SL</td>
+                        <td><img src="assets/nicegood.jpg" alt="">
+                            <img id="iconeplay4" src="assets/circle-play-solid.svg">
+                        </td>
+                    </tr>
+                    <audio id="nice">
+                        <source src="assets/nice.mp3" type="audio/mp3">
+                    </audio>
+                    <tr>
+                        <td>5 <i id="subiu" class="fa-solid fa-arrow-up"></i></td>
+                        <td>Selfish</td>
+                        <td>Kanye West ft XXXTENTACION</td>
+                        <td><img src="assets/donda2.jpg" alt="">
+                            <img id="iconeplay5" src="assets/circle-play-solid.svg">
+                        </td>
+                    </tr>
+                    <audio id="selfish">
+                        <source src="assets/selfish.mp3" type="audio/mp3">
+                    </audio>
+                    <tr>
+                        <td>6 <i id="subiu" class="fa-solid fa-arrow-up"></i></td>
+                        <td>SWEET / I THOUGHT YOU WANTED TO DANCE</td>
+                        <td>Tyler, The Creator, Brent Faiyaz, Fana Hues</td>
+                        <td><img src="assets/callmeifyougetlost.jpg" alt="">
+                            <img id="iconeplay6" src="assets/circle-play-solid.svg">
+                        </td>
+                    </tr>
+                    <audio id="dance">
+                        <source src="assets/dance.mp3" type="audio/mp3">
+                    </audio>
+                    <tr>
+                        <td>7 <i id="desceu" class="fa-solid fa-arrow-down"></i> </td>
+                        <td>See you Again</td>
+                        <td>Tyler, The Creator ft Kali Uchis</td>
+                        <td><img src="assets/seeu.webp" alt="">
+                            <img id="iconeplay7" src="assets/circle-play-solid.svg">
+                        </td>
+                    </tr>
+                    <audio id="seeyou">
+                        <source src="assets/seeyou.mp3" type="audio/mp3">
+                    </audio>
+                    <tr>
+                        <td>8 <i id="desceu" class="fa-solid fa-arrow-down"></i></td>
+                        <td>Stylin'</td>
+                        <td>Sainté</td>
+                        <td><img src="assets/stylin.jpg" alt="">
+                            <img id="iconeplay8" src="assets/circle-play-solid.svg">
+                        </td>
+                    </tr>
+                    <audio id="stylin">
+                        <source src="assets/stylin.mp3" type="audio/mp3">
+                    </audio>
+                    <tr>
+                        <td>9 <i id="desceu" class="fa-solid fa-arrow-down"></i></td>
+                        <td>Stop Breathing</td>
+                        <td>Playboi Carti</td>
+                        <td><img src="assets/redd.webp" alt="">
+                            <img id="iconeplay9" src="assets/circle-play-solid.svg">
+                        </td>
+                    </tr>
+                    <audio id="breath">
+                        <source src="assets/breath.mp3" type="audio/mp3">
+                    </audio>
+                    <tr>
+                        <td>10 <i id="desceu" class="fa-solid fa-arrow-down"></i></td>
+                        <td>Leans, Pt. 2</td>
+                        <td>Yunk Vino, Volp</td>
+                        <td><img src="assets/leanspt2.png" alt="">
+                            <img id="iconeplay10" src="assets/circle-play-solid.svg">
+                        </td>
+                    </tr>
+                    <audio id="leans">
+                        <source src="assets/leans.mp3" type="audio/mp3">
+                    </audio>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <!-- TABELA ARTISTAS -->
+
+
+
+        <div id="tabela_artistas" style="display:none;">
+            <div class="tipos_rank">
+                <h1 onclick="mostrarmusica()">Top músicas</h1>
+                <h1 onclick="mostrarartista()" class="agora">Top artistas</h1>
+                <h1 onclick="mostraralbum()">Top Fans</h1>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Artista</th>
+                        <th></th>
+                        <th>Gênero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Don Toliver</td>
+                        <td><img src="assets/dontoliverprofile.jpg" alt=""></td>
+                        <td>Hip-Hop</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Knucks</td>
+                        <td><img src="assets/knucks.webp" alt=""></td>
+                        <td>Grime/Drill</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>The Weekend</td>
+                        <td><img src="assets/THEWEEKEND.webp" alt=""></td>
+                        <td>R&B/Soul</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sainté</td>
+                        <td><img src="assets/sainte.jpg" alt=""></td>
+                        <td>Drill/Grime</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Kanye West</td>
+                        <td><img src="assets/kanye-west.webp" alt=""></td>
+                        <td>Rap</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Tyler, The Creator</td>
+                        <td><img src="assets/tyler.jpg" alt=""></td>
+                        <td>Rap</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Playboi Carti</td>
+                        <td><img src="assets/playboi-carti.jpg" alt=""></td>
+                        <td>Hip-hop/Rap</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>YNW Melly</td>
+                        <td><img src="assets/melly.png" alt=""></td>
+                        <td>Rap</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Yunk Vino</td>
+                        <td><img src="assets/vino.jpg" alt=""></td>
+                        <td>Trap/Rap</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>XXXTENTACION</td>
+                        <td><img src="assets/xxxtentacion.jpg" alt=""></td>
+                        <td>Hip-Hop/Rap</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tabela_albuns" style="display:none;">
+            <div class="tipos_rank">
+                <h1 onclick="mostrarmusica()">Top músicas</h1>
+                <h1 onclick="mostrarartista()">Top artistas</h1>
+                <h1 onclick="mostraralbum()" class="agora">Top Fans</h1>
+                <!-- <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button> -->
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <!-- <h1>Tyler</h1> -->
+                    <div class="fotorank"></div>
+                    <div class="perfil1">
+                        <img src="assets/tylergrammy.jpg">
+                    </div>
+                    <div class="infos">
+                        <h1>Tyler, the creator </h1>
+                        <p id="temp_aquario_1"></p>
+                    </div>
+
+                </div>
+                <div class="card">
+
+                    <div class="perfil1">
+                        <img src="assets/kanyefas.jpg">
+                    </div>
+                    <div class="infos">
+                        <h1>Kanye West</h1>
+                        <p id="temp_aquario_2"></p>
+                    </div>
+
+                </div>
+                <div class="card">
+
+                    <div class="perfil1">
+                        <img src="assets/THEWEEKENDicon.jpg">
+                    </div>
+                    <div class="infos">
+                        <h1>The Weeknd</h1>
+                        <p id="temp_aquario_3"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="perfil1">
+                        <img src="assets/frank.jpg">
+                    </div>
+                    <div class="infos">
+                        <h1>Frank Ocean</h1>
+                        <p id="temp_aquario_4"></p>
+                    </div>
+
+                </div>
+                <div class="card">
+
+                    <div class="perfil1">
+                        <img src="assets/mellyicon.jpg">
+                    </div>
+                    <div class="infos">
+                        <h1>YNW Melly</h1>
+                        <p id="temp_aquario_5"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="opcoes">
+                <h5>Home</h5>
+                <h5>Noticias</h5>
+                <h5>Cadastre-se</h5>
+                <h5>Login</h5>
+                <h5>Sobre</h5>
+                <h5>TOP 10</h5>
+            </div>
+            <div class="letter">
+                <h5>by Alexandre Costa</h5>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
+<script>
+
+    // Inicio do player de música
+
+    var ivy = document.getElementById("ivy")
+    var icone = document.getElementById("iconeplay")
+    icone.onclick = function () {
+        if (ivy.paused) {
+            ivy.play()
+            icone.src = "assets/circle-pause-solid.svg"
+        } else {
+            ivy.pause()
+            icone.src = "assets/circle-play-solid.svg"
+        }
+    }
+
+
+    var tryme = document.getElementById("tryme")
+    var icone2 = document.getElementById("iconeplay2")
+    icone2.onclick = function () {
+        if (tryme.paused) {
+            tryme.play()
+            icone2.src = "assets/circle-pause-solid.svg"
+        } else {
+            tryme.pause()
+            icone2.src = "assets/circle-play-solid.svg"
+        }
+    }
+    var hermanos = document.getElementById("hermanos")
+    var icone3 = document.getElementById("iconeplay3")
+    icone3.onclick = function () {
+        if (hermanos.paused) {
+            hermanos.play()
+            icone3.src = "assets/circle-pause-solid.svg"
+        } else {
+            hermanos.pause()
+            icone3.src = "assets/circle-play-solid.svg"
+        }
+    }
+    var nice = document.getElementById("nice")
+    var icone4 = document.getElementById("iconeplay4")
+    icone4.onclick = function () {
+        if (nice.paused) {
+            nice.play()
+            icone4.src = "assets/circle-pause-solid.svg"
+        } else {
+            nice.pause()
+            icone4.src = "assets/circle-play-solid.svg"
+        }
+    }
+    var selfish = document.getElementById("selfish")
+    var icone5 = document.getElementById("iconeplay5")
+    icone5.onclick = function () {
+        if (selfish.paused) {
+            selfish.play()
+            icone5.src = "assets/circle-pause-solid.svg"
+        } else {
+            selfish.pause()
+            icone5.src = "assets/circle-play-solid.svg"
+        }
+    }
+    var dance = document.getElementById("dance")
+    var icone6 = document.getElementById("iconeplay6")
+    icone6.onclick = function () {
+        if (dance.paused) {
+            dance.play()
+            icone6.src = "assets/circle-pause-solid.svg"
+        } else {
+            dance.pause()
+            icone6.src = "assets/circle-play-solid.svg"
+        }
+    }
+    var seeyou = document.getElementById("seeyou")
+    var icone7 = document.getElementById("iconeplay7")
+    icone7.onclick = function () {
+        if (seeyou.paused) {
+            seeyou.play()
+            icone7.src = "assets/circle-pause-solid.svg"
+        } else {
+            seeyou.pause()
+            icone7.src = "assets/circle-play-solid.svg"
+        }
+    }
+    var stylin = document.getElementById("stylin")
+    var icone8 = document.getElementById("iconeplay8")
+    icone8.onclick = function () {
+        if (stylin.paused) {
+            stylin.play()
+            icone8.src = "assets/circle-pause-solid.svg"
+        } else {
+            stylin.pause()
+            icone8.src = "assets/circle-play-solid.svg"
+        }
+    }
+    var breath = document.getElementById("breath")
+    var icone9 = document.getElementById("iconeplay9")
+    icone9.onclick = function () {
+        if (breath.paused) {
+            breath.play()
+            icone9.src = "assets/circle-pause-solid.svg"
+        } else {
+            breath.pause()
+            icone9.src = "assets/circle-play-solid.svg"
+        }
+    }
+    var leans = document.getElementById("leans")
+    var icone10 = document.getElementById("iconeplay10")
+    icone10.onclick = function () {
+        if (leans.paused) {
+            leans.play()
+            icone10.src = "assets/circle-pause-solid.svg"
+        } else {
+            leans.pause()
+            icone10.src = "assets/circle-play-solid.svg"
+        }
+    }
+
+    // Fim do player de música
+
+    // Inicio do slider 
+
+
+    var img1 = document.getElementById("img1"); //Guarda o id em que as imagens vão ser substituidas
+
+    var imagens = [
+        "assets/img1.webp",
+        "assets/img2.jpg",
+        "assets/img3.jpg"
+    ]
+    var len = imagens.length;
+    var i = 0
+    function slider() {
+        if (i > len - 1) {
+            i = 0
+        }
+        img1.src = imagens[i];
+        i++
+        setTimeout('slider()', 3000); // Setando o tempo de transição (3s)
+    }
+
+    // Fim do slider 
+
+    // Inicio das funções do top 10
+
+    function mostrarmusica() {
+        tabela_artistas.style.display = "none"
+        tabela_musicas.style.display = "block"
+        tabela_albuns.style.display = "none"
+    }
+    function mostrarartista() {
+        tabela_artistas.style.display = "block"
+        tabela_musicas.style.display = "none"
+        tabela_albuns.style.display = "none"
+    }
+    function mostraralbum() {
+        tabela_artistas.style.display = "none"
+        tabela_musicas.style.display = "none"
+        tabela_albuns.style.display = "block"
+        atualizacaoPeriodica()
+    }
+
+    // Fim das funções do top 10
+
+    // Inicio da aquisição de dados em tempo real 
+
+
+    function atualizacaoPeriodica() {
+        obterdados(1);
+        obterdados(2);
+        obterdados(3);
+        obterdados(4);
+        obterdados(5);
+        obterdados(6);
+
+        // function sendData() {
+        // 	var http = new XMLHttpRequest();
+        // 	http.open('POST', 'http://localhost:3000/api/sendData', false);
+        // 	http.send(null);
+        // }
+
+        setInterval(() => {
+            // sendData();
+        }, 2000);
+        setTimeout(atualizacaoPeriodica, 5000);
+    }
+
+    function obterdados(idartista) {
+        fetch(`/medidas/tempo-real/${idartista}`)
+            .then(resposta => {
+
+                if (resposta.ok) {
+                    resposta.json().then(resposta => {
+
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                        var dados = {
+                            favorito: resposta[0].favorito,
+                        }
+
+                        alertar(resposta[0].favorito, idartista);
+                    });
+                } else {
+
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+    function alertar(favorito, idartista) {
+        var limites = {
+            muito_quente: 23,
+            quente: 22,
+            ideal: 20,
+            frio: 10,
+            muito_frio: 5
+        };
+
+        var classe_temperatura = 'cor-alerta';
+
+        if (favorito >= limites.muito_quente) {
+            classe_favorito = 'cor-alerta perigo-quente';
+            console.log("caiu no 1")
+        }
+        else if (favorito < limites.muito_quente && favorito >= limites.quente) {
+            classe_favorito = 'cor-alerta alerta-quente';
+            console.log("caiu no 2")
+        }
+        else if (favorito < limites.quente && favorito > limites.frio) {
+            classe_favorito = 'cor-alerta ideal';
+            console.log("caiu no 3")
+        }
+        else if (favorito <= limites.frio && favorito > limites.muito_frio) {
+            classe_favorito = 'cor-alerta alerta-frio';
+            console.log("caiu no 4")
+        }
+        else if (favorito < limites.min_favorito) {
+            classe_favorito = 'cor-alerta perigo-frio';
+            console.log("caiu no 5")
+        }
+
+        var card;
+
+        if (idartista == 1) {
+            temp_aquario_1.innerHTML = favorito + " Favoritos";
+            card = card_1
+        }
+        else if (idartista == 2) {
+            temp_aquario_2.innerHTML = favorito + " Favoritos";
+            card = card_2
+        } else if (idartista == 3) {
+            temp_aquario_3.innerHTML = favorito + " Favoritos";
+            card = card_3
+        } else if (idartista == 4) {
+            temp_aquario_4.innerHTML = favorito + " Favoritos";
+            card = card_4
+        } else if (idartista == 5) {
+            temp_aquario_5.innerHTML = favorito + " Favoritos";
+            card = card_4
+        } else if (idartista == 6) {
+            temp_aquario_6.innerHTML = favorito + " Favoritos";
+            card = card_4
+        }
+
+
+        // alterando
+        card.className = classe_temperatura;
+
+    }
+    // Fim da aquisição de dados em tempo real
+
+
+
+</script>

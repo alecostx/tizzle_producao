@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&family=Orelega+One&display=swap');
+* {
+    margin: 0%;
+    padding: 0;
+    font-family: 'Nunito';
+}
+*::selection {
+    background-color: #a9a9a9;
+    color: black;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+i {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+
+i:hover {
+    transform: scale(1.2);
+}
+.main-container {
+    background: linear-gradient(to right, #090909, #181818);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-right {
+    color: #ffffff;
+    height: 80vh;
+    width: 40vw;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.conteudo-right  {
+    text-align: center;
+    height: 70%;
+    width: 50%;
+    text-decoration: none;
+    
+}
+.conteudo-right h2  {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.ipts input {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 6px 0;
+    margin: 5px 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.conteudo-right button {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin: auto;
+    background-color: #DA4453;
+    border: 0;
+    outline: none;
+    border-radius: 6px;
+    transition: all 0.8s;
+    color: white;
+}
+
+.conteudo-right button:hover {
+    transform: scale(1.1);
+}
+
+
+

@@ -1,0 +1,54 @@
+footer {
+    height: 150px;
+    width: 100%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&family=Orelega+One&display=swap');
+* {
+    margin: 0%;
+    padding: 0;
+    font-family: 'Nunito';
+}
+
+.footer-container {
+    height: 100%;
+    width: 100%;
+    background-color: #101010;
+    color: #999;
+
+}
+
+.opcoes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 22px;
+}
+
+.footer-container h5 {
+    margin-right: 22px;
+}
+
+.letter {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.letter h5 {
+    margin-top: 50px;
+    margin-left: 12px;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #101010;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dc143c;
+    border-radius: 12px;
+}
+

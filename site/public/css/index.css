@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,500;1,200;1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+#img1 {
+    width: 100%;
+    height: 100vh;
+    /* animation: zoom 3s linear infinite; */
+}
+
+/* A @keyframes seta as especificações da animação 'zoom'
+@keyframes zoom {
+    0% {
+        transform: scale(1.3);
+    }
+
+    15% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+} */
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+    position: absolute;
+    top: 0;
+    /* background: rgba(0, 0, 0, 0.112); */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.header {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin: 35px auto;
+}
+
+.logo h1 {
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+
+tr td #desceu {
+    color: rgb(255, 0, 0);
+}
+
+tr td #subiu {
+    color: rgb(64, 255, 0);
+}
+
+
+.itens {
+    flex: 1;
+    align-items: center;
+    text-align: right;
+
+
+}
+
+.itens a {
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin-left: 50px;
+    padding: 4px;
+}
+
+.itens a:hover {
+    color: #a9a9a9;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 3px;
+    border-style: solid;
+}
+
+.conteudo {
+    padding: 32px;
+    width: 60%;
+    margin: 110px auto 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /* background: rgba(0, 0, 0, 0.112);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); */
+    border-radius: 16px;
+}
+
+.conteudo h1 {
+    font-size: 2rem;
+}
+
+.conteudo h3 {
+    width: 80%;
+    margin: 20px auto 100px;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    border: 3px solid rgb(255, 255, 255);
+    background: transparent;
+    transition: background 0.2s;
+    margin-left: 40px;
+}
+
+button:hover {
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255)
+}
+
+#container {
+    padding-bottom: 100px;
+    padding-top: 100px;
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*::selection {
+    background-color: #a9a9a9;
+    color: black;
+}
+
+.perfil1 {
+    height: 250px;
+    width: 225px;
+}
+
+.perfil1 img {
+    height: 100%;
+    width: 100%;
+}
+.card:hover {
+    transform: scale(1.01);
+}
+.card {
+    transition: all (1.2s);
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.infos {
+    height: 125px;
+    width: 100%;
+    background-color: #DA4453;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.infos h1 {
+    color: white;
+}
+
+.infos p {
+    font-size: 1.6rem;
+}
+
+footer {
+    height: 150px;
+    width: 100%;
+}
+
+.footer-container {
+    height: 100%;
+    width: 100%;
+    background-color: #101010;
+    color: #999;
+
+}
+
+.opcoes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 22px;
+}
+
+.footer-container h5 {
+    margin-right: 22px;
+}
+
+.letter {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.letter h5 {
+    margin-top: 50px;
+    margin-left: 12px;
+}
+
+#iconeplay,
+#iconeplay2,
+#iconeplay3,
+#iconeplay4,
+#iconeplay5,
+#iconeplay6,
+#iconeplay7,
+#iconeplay8,
+#iconeplay9,
+#iconeplay10 {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    margin-bottom: 30px;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #101010;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: crimson;
+    border-radius: 12px;
+}
